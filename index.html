@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>SAN VALENTIN</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<audio id="musica" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+  <div id="app">
+<div class="corazones-fondo"></div>
+    <!-- ================= PORTADA ================= -->
+    <div id="portada" class="portada">
+      <h1>RECORDANDO MOMENTOS
+        <br>
+        
+        MI VIDA</h1>
+      <p class="sub">Un pequeño recuerdo de los momentos que vivimos juntas </p>
+
+      <img src="fotos/IMG1.png" class="imagen-portada">
+
+    <button class="btn-abrir" onclick="abrirLibro()">Abrir libro</button>
+
+    </div>
+
+
+    <!-- ================= LIBRO ================= -->
+    <div id="libro" class="libro oculto">
+
+      <div class="lomo"></div>
+
+      <!-- PÁGINA IZQUIERDA -->
+      <div class="pagina" id="izquierda"></div>
+
+      <!-- PÁGINA DERECHA -->
+      <div class="pagina" id="derecha"></div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

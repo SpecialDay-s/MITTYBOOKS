@@ -1,0 +1,290 @@
+body {
+  margin: 0;
+  font-family: "Playfair Display", "Times New Roman", serif;
+  background: #f4f1ea;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+
+
+}
+
+
+/* ================= PORTADA ================= */
+
+.portada {
+  position: relative;
+  background: linear-gradient(145deg, #3b2414, #5a3822);
+  color: #f4e7c5;
+  padding: 60px 40px;
+  border-radius: 14px;
+  text-align: center;
+  width: 420px;
+  max-width: 100%;
+
+  /* marco exterior */
+  border: 10px solid #2a160c;
+
+  /* profundidad */
+  box-shadow:
+    0 25px 50px rgba(0,0,0,0.5),
+    inset 0 0 20px rgba(0,0,0,0.35);
+}
+
+/* borde decorativo interior */
+.portada::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 2px solid #d6c7aa;
+  border-radius: 6px;
+  pointer-events: none;
+}
+
+.portada h1 {
+  margin-top: 0;
+  font-size: 28px;
+}
+
+.sub {
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+.imagen-portada {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 30px;
+}
+/* FOTO ROMÁNTICA ENMARCADA */
+
+.marco-foto {
+  background: #fffaf3;
+  padding: 10px;
+  border: 1px solid #e0d2b8;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.imagen-romantica {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.nota-foto {
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #7a6147;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+/* ================= BOTONES ================= */
+
+button {
+  padding: 12px 24px;
+  border: none;
+  background: #d6c7aa;
+  color: #2c1810;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: px;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+.btn-abrir {
+  padding: 8px 18px;
+  font-size: 13px;
+  width: auto;
+}
+
+/* ================= LIBRO ================= */
+
+.libro {
+  display: flex;
+  position: relative;
+  background: #f8f3e8;
+  border: 1px solid #c9b79c;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 900px;
+  width: 100%;
+
+   border: 10px solid;
+  border-image: linear-gradient(
+    45deg,
+    #c6a96b,
+    #f1e1b0,
+    #c6a96b
+  ) 1;
+}
+
+.pagina {
+  width: 50%;
+  padding: 40px;
+  min-height: 520px;
+  box-sizing: border-box;
+
+  background: linear-gradient(
+    to bottom,
+    #fffdf8 0%,
+    #f4efe4 100%
+  );
+  border: 1px solid #e2d4b7;
+  border-radius: 4px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+.pagina {
+  box-shadow:
+    inset 0 0 30px rgba(120, 90, 50, 0.08),
+    inset 0 0 5px rgba(0,0,0,0.05);
+}
+.pagina p::first-letter {
+  font-size: 38px;
+  font-weight: 600;
+  float: left;
+  margin-right: 8px;
+  line-height: 1;
+  color: #5a3a21;
+}
+.pagina h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #5a3a21;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.pagina h2::after {
+  content: "❦";
+  display: block;
+  font-size: 18px;
+  margin-top: 8px;
+  color: #c9b79c;
+}
+.lomo {
+  position: absolute;
+  left: 50%;
+  width: 6px;
+  height: 100%;
+  background: #c9b79c;
+}
+
+.imagen-pagina {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.controles {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.oculto {
+  display: none;
+}
+
+/* ================= 📱 MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  body {
+    align-items: flex-start;
+  }
+
+  .libro {
+    flex-direction: column;
+  }
+
+  .pagina {
+    width: 100%;
+    min-height: auto;
+    padding: 30px 24px;
+  }
+
+  .lomo {
+    display: none;
+  }
+
+  .imagen-pagina {
+    height: 160px;
+  }
+
+  .portada {
+    padding: 40px 24px;
+  }
+
+  .portada h1 {
+    font-size: 24px;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .controles {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+/* CONTENEDOR DEL FONDO */
+.corazones-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* CORAZÓN INDIVIDUAL */
+.corazon {
+  position: absolute;
+  color: rgba(255, 120, 170, 0.7);
+  animation: caer linear infinite;
+  filter: blur(0.3px);
+  text-shadow: 0 0 8px rgba(255, 120, 170, 0.6);
+}
+/* ANIMACIÓN DE CAÍDA */
+@keyframes caer {
+  0% {
+    transform: translateY(-10vh) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) scale(1.3);
+    opacity: 0;
+  }
+}
+
+/* ASEGURAR QUE EL LIBRO QUEDE ENCIMA */
+#portada,
+#libro {
+  position: relative;
+  z-index: 1;
+}
